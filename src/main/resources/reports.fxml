@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wallace.controller.ReportController">
+   <children>
+       <TableView fx:id="reports_tableview" layoutX="25.0" layoutY="118.0" prefHeight="421.0" prefWidth="750.0">
+           <columns>
+               <TableColumn fx:id="report_appointment_id_col" prefWidth="75.0" text="ID" />
+               <TableColumn fx:id="report_appointment_title_col" prefWidth="88.0" text="Title" />
+               <TableColumn fx:id="report_appointment_description_col" prefWidth="110.0" text="Description" />
+               <TableColumn fx:id="report_appointment_location_col" prefWidth="81.0" text="Location" />
+               <TableColumn fx:id="report_appointment_type_col" prefWidth="93.0" text="Type" />
+               <TableColumn fx:id="report_appointment_start_col" prefWidth="97.0" text="Start" />
+               <TableColumn fx:id="report_appointment_end_col" prefWidth="104.0" text="End" />
+               <TableColumn fx:id="report_appointment_customerId_col" prefWidth="101.0" text="Customer" />
+           </columns>
+       </TableView>
+      <ComboBox fx:id="report_customer_combo" layoutX="25.0" layoutY="76.0" onAction="#on_report_customer_combo" prefHeight="25.0" prefWidth="135.0" />
+      <ComboBox fx:id="report_month_combo" layoutX="180.0" layoutY="76.0" onAction="#on_report_month_combo" prefHeight="25.0" prefWidth="135.0" />
+      <ComboBox fx:id="report_type_combo" layoutX="343.0" layoutY="76.0" onAction="#on_report_type_combo" prefHeight="25.0" prefWidth="135.0" />
+      <ComboBox fx:id="report_user_combo" layoutX="507.0" layoutY="76.0" onAction="#on_report_user_combo" prefHeight="25.0" prefWidth="135.0" />
+      <Label layoutX="25.0" layoutY="14.0" text="Reports">
+         <font>
+            <Font name="Arial" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="filter_reset" layoutX="674.0" layoutY="76.0" mnemonicParsing="false" onAction="#on_filter_reset" text="Reset Filters" />
+      <Button fx:id="cancel_button" layoutX="704.0" layoutY="551.0" mnemonicParsing="false" onAction="#on_cancel_button" text="Cancel" />
+      <Label layoutX="25.0" layoutY="56.0" text="By Customer:" />
+      <Label layoutX="180.0" layoutY="56.0" text="By Month:" />
+      <Label layoutX="343.0" layoutY="56.0" text="By Type:" />
+      <Label layoutX="507.0" layoutY="56.0" text="By User:" />
+   </children>
+</AnchorPane>
